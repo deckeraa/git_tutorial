@@ -1,0 +1,16 @@
+As a user, I would like to setup a Software_Quality respository thats going to
+be public so I can save all of software Quality files in there.
+
+1) The user will need to go to the Github.com website.
+2) The user will need to sign into github with their username and password.
+3) On the top right hand corner to the right of your username, there is a 
+   button that looks like a book with a plus sign that the user will click.
+4) Type in Software_Quality in the text box that has repository name label
+   above it.
+5) Make sure that the public radio button is clicked underneath the Description
+   Text box.
+6) Click on the check box that says "Initialize this repository with a README"
+7) You dont need to add a gitgnore or a license.
+8) Click on "Create Repository" button.
+9) You have finished creating the Software_Quality repository.
+
