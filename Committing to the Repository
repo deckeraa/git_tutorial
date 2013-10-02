@@ -1,0 +1,13 @@
+After the Software_Quality repsoitory is setup, as a user I would like to 
+commit my file to the Software_Quality repository.
+
+1) On your github account homepage click on the Software_Quality Repository.
+2) Towards the upper middle of the page, next to the Software_Quality link, There
+   will be a symbol with a paper with a '+' symbol.
+3) Click on the symbol.
+4) The name of the file will be "Testing how to Commit"
+5) The text will be "Trying out how to commit for the first time"
+6) On the bottom of the page, there will be an extended description text box,
+   put in "Committed my first file"
+7) Click on the "Commit New File button".
+8) Have committed a file to the repository.
