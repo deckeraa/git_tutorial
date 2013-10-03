@@ -23,3 +23,35 @@ Note: You can merge into a branch that isn't master, by replacing master
 5. If your branch is no longer needed, it can be deleted by typing
    "git branch -d <name>" where <name> is the name of the branch you want to
    delete.
+
+Complicated merge (with conflicting commits):
+A complicated merge will have conflicts because the same text in a file was
+changed in the commits the separate the master branch and the branch to merge.
+In order to merge successfully, these conflicts must be resolved.
+1. First, checkout the master branch like in the above example by typing
+   "git checkout master"
+2. Type "git merge <name>" where <name> is the name of the branch you wish
+   to merge into master.
+3. If there are conflicting edits, git will notify you what type of conflict
+   it is and in which file(s).
+4. To get more information about the conflicts, you can run "git status"
+5. There are 2 ways to deal with conflict resolution: manual editing and
+   git's mergetool.
+Manual Editing:
+ 6. To resolve the conflict by manually editing the file, you need to open the
+    conflicting file in your favorite text editor.  Look for something like:
+    "<<<<<<< HEAD:<filename>" where <filename> is the name of the file.
+    The text below this will be what edits have been made on the branch you
+    are merging into (most likely master).  Next, you will find something like:
+    "======="
+    This is the end of the text from master.  Below it will be the text from
+    the branch you are trying to merge into master.  Below that will be
+    something like:
+    ">>>>>>> <name>:<filename>" where <name> is the name of the branch you are
+    merging into master and <filename> is the name of the file.
+ 7. In order to resolve this conflict, remove everything between the lines with
+    "<<<<<<<" and ">>>>>>>" and replace it with the text you want.
+ 8. Run "git status" again to verify all of the conflicts have been resolved.
+ 9. Commit the merge by running "git commit"
+ 10. Push the changes by running "git push origin master"
+Git's mergetool:
