@@ -1,0 +1,21 @@
+After the repository is set up, users will want to create branches from the
+master repository in order to develop without damaging the master repository.
+This assumes that the user already has access to the repository on his/her
+local machine.
+
+1. Navigate to the directory of your repository.
+2. Create a branch by typing in "git branch <name>" where you replace <name>
+   with the name of the branch you desire.
+3. Checkout that branch by typing "git checkout <name>" where <name> is the
+   name of the branch.
+   Note: These last 2 steps can be shortened by using the -b switch on checkout
+   Example: "git checkout -b <name>" where <name> is the name of the branch
+   you wish to create.
+4. You can now commit to the new branch.  Any changes here will be separate
+   from the master branch.
+5. After making changes to the branch, you might want to get back to the master
+   branch.  In order to do this, you can type "git checkout master".
+   Note: You cannot have any uncommitted changes before you checkout.
+         This can be avoided by using git stash (not covered here).
+6. After making changes to your new branch, you will probably want to merge it
+   with master.  This is covered in a separate section called "Merging"
