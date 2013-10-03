@@ -51,7 +51,9 @@ Manual Editing:
     merging into master and <filename> is the name of the file.
  7. In order to resolve this conflict, remove everything between the lines with
     "<<<<<<<" and ">>>>>>>" and replace it with the text you want.
- 8. Run "git status" again to verify all of the conflicts have been resolved.
- 9. Commit the merge by running "git commit"
- 10. Push the changes by running "git push origin master"
+ 8. Add the file to git by running "git add <filename>" where <filename> is
+    the name of the file.
+ 9. Run "git status" again to verify all of the conflicts have been resolved.
+ 10. Commit the merge by running "git commit"
+ 11. Push the changes by running "git push origin master"
 Git's mergetool:
