@@ -18,6 +18,8 @@ Note: You can merge into a branch that isn't master, by replacing master
    to merge into master.
 3. Assuming no conflicts where created, the branch should merge into master
    and master will include all of the changes made on your branch.
-4. If your branch is no longer needed, it can be deleted by typing
+4. You need to push these changes to the repository.  You can do this by typing
+   "git push origin master"
+5. If your branch is no longer needed, it can be deleted by typing
    "git branch -d <name>" where <name> is the name of the branch you want to
    delete.
