@@ -57,3 +57,12 @@ Manual Editing:
  10. Commit the merge by running "git commit"
  11. Push the changes by running "git push origin master"
 Git's mergetool:
+ 6. Run git's mergetool by running "git mergetool"
+ 7. This doesn't actually do much other than run a merge tool that you have
+    used in the past on your machine.  For example, it ran tortoisemerge on my
+    computer.
+ 8. After you merged the files in what git decided was your favorite merge
+    tool, add the file by typing "git add <filename>"
+ 9. Run "git status" to verify all of the conflicts have been resolved.
+ 10. Commit the merge by typing "git commit"
+ 11. Push the changes by typing "git push origin master"
