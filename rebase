@@ -1,1 +1,5 @@
 Git Rebase:
+
+Rebase is used to rewrite commit history. It is an alternative to three-way merging.
+When doing work that will be pushed to a repository you do not control,
+rebasing makes it so that the person pulling does not have to do a merge put can simply fast-forward.
