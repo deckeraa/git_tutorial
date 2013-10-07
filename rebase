@@ -8,4 +8,6 @@ Scenario:
         You are a software engineer writing a git tutorial.
 On the master branch someone has committed a file called "rebase", which is blank.
 1) You branch by using "git branch rebase-test" and "git checkout rebase-test".
-2) You edit the file, adding in you cleverly worded pose, and run "git commit rebase" to commit your changes.
+2) You edit the file, adding in you cleverly worded prose, and run "git commit rebase" to commit your changes.
+3) You add another line, and are satisfied with your changes for the time being. You commit again to the "rebase-test" branch.
+4) However, someone has commited to the master branch, and you don't want to force others to merge, so you will rebase.
