@@ -11,3 +11,8 @@ On the master branch someone has committed a file called "rebase", which is blan
 2) You edit the file, adding in you cleverly worded prose, and run "git commit rebase" to commit your changes.
 3) You add another line, and are satisfied with your changes for the time being. You commit again to the "rebase-test" branch.
 4) However, someone has commited to the master branch, and you don't want to force others to merge, so you will rebase.
+5) Start the rebase using "git rebase master". This will rebase the current branch against master.
+6) Git reports a conflict caused by the recent commit to master. Manually fix the conflict by editing the "rebase" file.
+7) When you are satisfied that all your precious work is now integrated, mark the conflicts as resolved by running "git add rebase".
+8) Run "git rebase --continue" to finish the rebase.
+9) At this point you have been documenting how to rebase in your file, and want to commit again. Do so by running "git commit rebase".
