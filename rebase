@@ -2,17 +2,24 @@ Git Rebase:
 
 Rebase is used to rewrite commit history. It is an alternative to three-way merging.
 When doing work that will be pushed to a repository you do not control,
-rebasing makes it so that the person pulling does not have to do a merge put can simply fast-forward.
+rebasing makes it so that the person pulling does not have to do a merge but can simply fast-forward.
+Note, however, that you should *never* rebase code that you have already released publicly.
+That is like rewriting history, and not even Doctor Who is allowed to do that.
 
 Scenario:
         You are a software engineer writing a git tutorial.
 On the master branch someone has committed a file called "rebase", which is blank.
 1) You branch by using "git branch rebase-test" and "git checkout rebase-test".
-2) You edit the file, adding in you cleverly worded prose, and run "git commit rebase" to commit your changes.
+1a) Unbeknownst to you, an evil gremlin or a co-worked edits and commits the "rebase" file on the master branch.
+2) You edit the file, adding in your cleverly worded prose, and run "git commit rebase" to commit your changes.
 3) You add another line, and are satisfied with your changes for the time being. You commit again to the "rebase-test" branch.
-4) However, someone has commited to the master branch, and you don't want to force others to merge, so you will rebase.
-5) Start the rebase using "git rebase master". This will rebase the current branch against master.
+4) However, someone has committed to the master branch, and you don't want to force others to merge, so you will rebase.
+5) Start the rebase using "git rebase master". This will rebase the current branch, "rebase-test", against master.
 6) Git reports a conflict caused by the recent commit to master. Manually fix the conflict by editing the "rebase" file.
-7) When you are satisfied that all your precious work is now integrated, mark the conflicts as resolved by running "git add rebase".
+7) When you are satisfied that all your precious work is now merged, mark the conflicts as resolved by running "git add rebase".
 8) Run "git rebase --continue" to finish the rebase.
 9) At this point you have been documenting how to rebase in your file, and want to commit again. Do so by running "git commit rebase".
+10) Switch back to the master branch by running "git checkout master".
+11) Merge in the changes made on the rebase-test branch by running "git merge rebase-test".
+12) Notice that the merge is simply a fast-forward. Inwardly glow with satisfaction at the knowledge that merging your changes in
+was painless because you already fixed all the merge problems when you rebased. Now it looks like development was nice and linear.
